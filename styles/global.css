@@ -1,3 +1,20 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: var(--color5);
+    width: 1000px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 :root {
     --background: rgb(224, 234, 247);
     --header-background: white;
@@ -13,6 +30,10 @@ body {
 }
 
 header {
+    --header-height: 80px;
+    --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
+    --gutter: 30px;
+    --footer-height: 25px;
     position: sticky;
     top: 0;
     display: flex;
@@ -20,16 +41,36 @@ header {
     background-color: var(--header-background);
 }
 
-main {
-    padding: 20px;
-}
+
 
 footer {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
-    padding: 7px 20px;
-    font-size: .8em;
+    height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--footer-background);
+    background-color: var(--color3);
+    box-shadow: var(--shadow);
+}
+
+.hiding-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.cups {
+    height: 300px;
+    display: flex;
+
+}
+.chip::after {
+    content: '😃';
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
