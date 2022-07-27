@@ -24,6 +24,9 @@ const lossesEl = document.getElementById('losses');
 const winsEl = document.getElementById('wins');
 const perCent = document.getElementById('percent');
 
+const choiceEl = document.getElementById('choice');
+const answerEl = document.getElementById('answer');
+
 const oneContainer = document.getElementById('one-container');
 const twoContainer = document.getElementById('two-container');
 const threeContainer = document.getElementById('three-container');
@@ -58,6 +61,9 @@ threeButton.addEventListener ('click', () => {
 function handleGuess(correctSpot, userGuess) {
     console.log(correctSpot);
     console.log(userGuess);
+    choiceEl.textContent = userGuess;
+    answerEl.textContent = correctSpot;
+    
     totalGuesses++;
     if (correctSpot === userGuess) {
         console.log('correct');
@@ -85,6 +91,7 @@ function handleGuess(correctSpot, userGuess) {
     if (newEl === 'three-container') {
         threeContainer.classList.add('chip');
     }
+
 }
 function resetStyles() {
     oneContainer.classList.remove('chip');
