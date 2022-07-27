@@ -86,11 +86,20 @@ function handleGuess(correctSpot, userGuess) {
         threeContainer.classList.add('chip');
     }
 }
-
-retryButton.addEventListener ('click', () => {
-//reset styles
+function resetStyles() {
     oneContainer.classList.remove('chip');
     twoContainer.classList.remove('chip');
     threeContainer.classList.remove('chip');   
+}
+retryButton.addEventListener ('click', () => {
+    totalGuesses = 0;
+    correctGuesses = 0;
+    wrongGuesses = 0;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = wrongGuesses;
+    winsEl.textContent = correctGuesses;
+    perCent.textContent = 0;
+    resetStyles();
+
 }
 );

@@ -1,10 +1,23 @@
+body {
+    height: 100vh;
+    font-family: 'Rubik', san-serif;
+    background: var(--background);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+:root {
+    --background: rgb(224, 234, 247);
+    --header-background: white;
+    --footer-background: rgb(243, 242, 242);
+}
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 section {
     background-color: var(--color5);
     width: 1000px;
@@ -13,20 +26,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --footer-background: rgb(243, 242, 242);
-}
-
-body {
-    height: 100vh;
-    font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -40,11 +39,8 @@ header {
     align-items: center;
     background-color: var(--header-background);
 }
-
-
-
 footer {
-    position: fixed;
+    position: flex;
     width: 100%;
     bottom: 0;
     height: var(--footer-height);
@@ -53,24 +49,23 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 .hiding-place {
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 .cups {
     height: 300px;
     display: flex;
-
 }
 .chip::after {
     content: '😃';
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 8rem;
+    position: absolute;
 }
